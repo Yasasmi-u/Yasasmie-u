@@ -10,13 +10,13 @@
     rel="stylesheet">
   <style>
     :root {
-      --bg-color: #0a0a0c;
-      --surface: rgba(255, 255, 255, 0.03);
-      --surface-border: rgba(255, 255, 255, 0.08);
-      --text-primary: #ffffff;
-      --text-secondary: #9ca3af;
-      --accent-1: #8b5cf6;
-      --accent-2: #ec4899;
+      --bg-color: #f8fafc;
+      --surface: rgba(255, 255, 255, 0.7);
+      --surface-border: rgba(0, 0, 0, 0.08);
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --accent-1: #6366f1;
+      --accent-2: #d946ef;
       --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
     }
 
@@ -36,8 +36,8 @@
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
       background-image:
-        radial-gradient(circle at 15% 50%, rgba(139, 92, 246, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(236, 72, 153, 0.15), transparent 25%);
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.08), transparent 25%);
       background-attachment: fixed;
     }
 
@@ -58,6 +58,7 @@
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--surface-border);
       border-radius: 24px;
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
     }
 
     /* Navigation */
@@ -120,7 +121,7 @@
 
     .nav-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
     /* Layout */
@@ -156,13 +157,13 @@
       display: inline-block;
       padding: 0.5rem 1rem;
       border-radius: 100px;
-      background: rgba(139, 92, 246, 0.1);
+      background: rgba(99, 102, 241, 0.1);
       color: var(--accent-1);
       font-size: 0.85rem;
       font-weight: 600;
       letter-spacing: 1px;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba(139, 92, 246, 0.2);
+      border: 1px solid rgba(99, 102, 241, 0.2);
     }
 
     .hero h1 {
@@ -238,7 +239,7 @@
 
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     }
 
     .btn-outline {
@@ -266,7 +267,8 @@
 
     .skill-card:hover {
       transform: translateY(-10px);
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     }
 
     .skill-card h3 {
@@ -282,7 +284,7 @@
     }
 
     .tag {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.03);
       color: var(--text-secondary);
       padding: 0.5rem 1rem;
       border-radius: 8px;
@@ -292,7 +294,7 @@
     }
 
     .tag:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.08);
       color: var(--text-primary);
     }
 
@@ -438,7 +440,7 @@
     textarea {
       width: 100%;
       padding: 1rem 1.5rem;
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.5);
       border: 1px solid var(--surface-border);
       border-radius: 12px;
       color: var(--text-primary);
