@@ -10,11 +10,11 @@
     rel="stylesheet">
   <style>
     :root {
-      --bg-color: #f8fafc;
-      --surface: rgba(255, 255, 255, 0.7);
-      --surface-border: rgba(0, 0, 0, 0.08);
-      --text-primary: #0f172a;
-      --text-secondary: #475569;
+      --bg-color: #0b0f19;
+      --surface: rgba(15, 23, 42, 0.6);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
       --accent-1: #6366f1;
       --accent-2: #d946ef;
       --accent-gradient: linear-gradient(135deg, var(--accent-1), var(--accent-2));
@@ -36,8 +36,8 @@
       font-family: 'Inter', sans-serif;
       overflow-x: hidden;
       background-image:
-        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.08), transparent 25%);
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.15), transparent 25%);
       background-attachment: fixed;
     }
 
@@ -267,8 +267,8 @@
 
     .skill-card:hover {
       transform: translateY(-10px);
-      border-color: rgba(0, 0, 0, 0.15);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
 
     .skill-card h3 {
@@ -284,7 +284,7 @@
     }
 
     .tag {
-      background: rgba(0, 0, 0, 0.03);
+      background: rgba(255, 255, 255, 0.03);
       color: var(--text-secondary);
       padding: 0.5rem 1rem;
       border-radius: 8px;
@@ -294,7 +294,7 @@
     }
 
     .tag:hover {
-      background: rgba(0, 0, 0, 0.08);
+      background: rgba(255, 255, 255, 0.08);
       color: var(--text-primary);
     }
 
@@ -440,7 +440,7 @@
     textarea {
       width: 100%;
       padding: 1rem 1.5rem;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(15, 23, 42, 0.4);
       border: 1px solid var(--surface-border);
       border-radius: 12px;
       color: var(--text-primary);
