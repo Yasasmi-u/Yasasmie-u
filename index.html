@@ -37,7 +37,9 @@
       overflow-x: hidden;
       background-image:
         radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
-        radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.15), transparent 25%);
+        radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.15), transparent 25%),
+        radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px;
       background-attachment: fixed;
     }
 
@@ -309,10 +311,18 @@
       display: flex;
       gap: 4rem;
       align-items: center;
+      padding: 3rem;
+      transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     }
 
     .project-card:nth-child(even) {
       flex-direction: row-reverse;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(99, 102, 241, 0.25);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(99, 102, 241, 0.1);
     }
 
     .project-image {
@@ -467,8 +477,35 @@
       border-top: 1px solid var(--surface-border);
     }
 
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .certifications-container {
+      position: sticky;
+      top: 120px;
+    }
+
+    .certifications-container h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
     /* Responsive */
     @media (max-width: 992px) {
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .certifications-container {
+        position: static;
+      }
+
       .hero {
         flex-direction: column;
         text-align: center;
@@ -639,7 +676,7 @@
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/food_ordering_system.png" alt="Online Food Ordering System">
         </div>
@@ -667,7 +704,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/smart_campus_dashboard.png" alt="Smart Campus API">
         </div>
@@ -687,7 +724,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/court_connect_app.png" alt="CourtConnect">
         </div>
@@ -707,7 +744,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/estate_agent_spa.png" alt="React Estate Agent SPA">
         </div>
@@ -725,7 +762,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/finance_tracker.png" alt="Premium Finance Tracker">
         </div>
@@ -743,7 +780,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card glass">
         <div class="project-image">
           <img src="assets/gear_rent_pro.png" alt="GearRent-Pro">
         </div>
@@ -765,54 +802,75 @@
   </section>
 
   <section id="education">
-    <h2 class="section-title">Education & Courses</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">2024 - 2028</div>
-        <h3 class="timeline-title">BSc (Hons) in Computer Science</h3>
-        <div class="timeline-subtitle">Informatics Institute of Technology (IIT) — Affiliated with University of
-          Westminster</div>
-        <div class="timeline-desc">
-          Successfully completed Level 4 and Level 5 modules.
-          <br>
-          Strong focus on :-
-          <li>Software Development</li>
-          <li>Object-Oriented Programming (OOP)</li>
-          <li>Database</li>
-          <li>Web Design & Development</li>
-          <li>Machine Learning & Data Mining</li>
-          <li>Client-Server Architectures</li>
-          <li>Computer Systems Fundamentals</li>
+    <h2 class="section-title">Education & Credentials</h2>
+    <div class="education-grid">
+      <div class="timeline-container">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2024 - 2028</div>
+            <h3 class="timeline-title">BSc (Hons) in Computer Science</h3>
+            <div class="timeline-subtitle">Informatics Institute of Technology (IIT) — Affiliated with University of Westminster</div>
+            <div class="timeline-desc">
+              Successfully completed Level 4 and Level 5 modules.
+              <br><br>
+              <strong>Core Modules & Focus Areas:</strong>
+              <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem; color: var(--text-secondary); line-height: 1.8;">
+                <li>💻 Software Development</li>
+                <li>⚙️ Object-Oriented Programming (OOP)</li>
+                <li>🗄️ Database Management Systems</li>
+                <li>🎨 Web Design & Development</li>
+                <li>🤖 Machine Learning & Data Mining</li>
+                <li>🌐 Client-Server Architectures</li>
+                <li>🖥️ Computer Systems Fundamentals</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025 - 2026</div>
+            <h3 class="timeline-title">Diploma in Software Engineering</h3>
+            <div class="timeline-subtitle">Institute of Java and Software Engineering (IJSE)</div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2012 - 2022</div>
+            <h3 class="timeline-title">Secondary Education</h3>
+            <div class="timeline-subtitle">Debarawewa Central College</div>
+            <div class="timeline-desc">
+              GCE A/L Exam 2022: Mathematics (B), Chemistry (C), Physics (C)<br>
+              GCE O/L Exam 2018: 8A, 1B
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="timeline-item">
-        <div class="timeline-date">2025 - 2026</div>
-        <h3 class="timeline-title">Diploma in Software Engineering</h3>
-        <div class="timeline-subtitle">Institute of Java and Software Engineering (IJSE)</div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">2012 - 2022</div>
-        <h3 class="timeline-title">Secondary Education</h3>
-        <div class="timeline-subtitle">Debarawewa Central College</div>
-        <div class="timeline-desc">
-          GCE A/L Exam 2022: Mathematics (B), Chemistry (C), Physics (C)<br>
-          GCE O/L Exam 2018: 8A, 1B
+      <div class="certifications-container">
+        <h3>Certifications & Courses</h3>
+        <div class="glass" style="padding: 2.5rem;">
+          <ul style="list-style: none; color: var(--text-secondary); line-height: 2.2; padding: 0; margin: 0;">
+            <li style="margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span>🎓</span> 
+              <span><strong>Web Development</strong><br><small style="color: var(--text-secondary); opacity: 0.8;">Royal ICT Institute (2024)</small></span>
+            </li>
+            <li style="margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span>🎓</span> 
+              <span><strong>Event-Driven Programming</strong><br><small style="color: var(--text-secondary); opacity: 0.8;">Code.org (2024)</small></span>
+            </li>
+            <li style="margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span>🎓</span> 
+              <span><strong>Software Development</strong><br><small style="color: var(--text-secondary); opacity: 0.8;">SLASSCOM Academy (2024)</small></span>
+            </li>
+            <li style="margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span>🎓</span> 
+              <span><strong>Python for Beginners</strong><br><small style="color: var(--text-secondary); opacity: 0.8;">University of Moratuwa (2024)</small></span>
+            </li>
+            <li style="margin-bottom: 0.75rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span>🎓</span> 
+              <span><strong>Project Management</strong><br><small style="color: var(--text-secondary); opacity: 0.8;">University of Moratuwa (2024)</small></span>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-
-    <h3 style="font-size: 2rem; margin: 4rem 0 2rem; font-family: 'Outfit', sans-serif;">Certifications & Short Courses
-    </h3>
-    <div class="glass" style="padding: 2rem;">
-      <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
-        <li>• <strong>Web Development</strong> – Royal ICT Institute (2024)</li>
-        <li>• <strong>Event-Driven Programming</strong> – Code.org (2024)</li>
-        <li>• <strong>Software Development</strong> – SLASSCOM Academy (2024)</li>
-        <li>• <strong>Python for Beginners</strong> – University of Moratuwa (2024)</li>
-        <li>• <strong>Project Management</strong> – University of Moratuwa (2024)</li>
-      </ul>
     </div>
   </section>
 
